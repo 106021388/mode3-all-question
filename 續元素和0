@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scn=new Scanner(System.in);
+        int n=scn.nextInt();
+        int input[]=new int[n];
+        for(int i=0;i<n;i++){
+            input[i]=scn.nextInt();
+        }
+        for(int i=0;i<n;i++){
+            int sum=input[i];
+            String re=Integer.toString(sum);
+            for(int j=i+1;j<n;j++){
+                sum=sum+input[j];
+                re+=" "+Integer.toString(input[j]);
+                if(sum==0){
+                    System.out.println(re);
+                }
+            }
+            }
+        }
