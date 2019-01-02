@@ -1,0 +1,31 @@
+import java.util.Random;
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scn=new Scanner(System.in);
+        Random rand=new Random();
+        long input=scn.nextLong();
+        rand.setSeed(input);
+        int data[]=new int[6];
+        int i=0;
+        boolean flag= true;
+        while(i<6){
+            data[i]=rand.nextInt(42)+1;
+            flag=true;
+            for(int j=0;j<i;j++){
+                if(data[i]==data[j]){
+                    flag=false;
+                }
+            }
+            if(flag){
+                if(i<5){
+                    System.out.print(data[i]+"\t");
+                }else{
+                    System.out.print(data[i]);
+                }
+                i++;
+            }
+        }
+        System.out.println();
+    }
+}
