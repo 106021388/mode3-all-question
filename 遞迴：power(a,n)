@@ -1,0 +1,14 @@
+import java.util.Scanner;
+public class test1 {
+    public static void main(String[] args) {
+        Scanner scn=new Scanner(System.in);
+        System.out.println(F(scn.nextInt(),scn.nextInt()));
+    }
+    public  static long F(int a,int n) {
+    if(n==1){
+        return  a;
+    }else{
+        return a*F(a,n-1);
+    }
+    }
+}
