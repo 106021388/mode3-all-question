@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class test1 {
+    public static void main(String[] args) {
+        Scanner scn=new Scanner(System.in);
+        String input= scn.nextLine();
+        String word[]=input.split(" ");
+        int lengh=word.length;System.out.println(lengh);
+        int value[][]=new int[2][26];
+        for(int i=0;i<word.length;i++){
+            for(int j=0;j<word[i].length();j++){
+                int n=word[i].charAt(j)-'a';
+                if(n>=0 && n<=25){
+                    value[0][n]++;
+                }else{
+                    n=word[i].charAt(j)-'A';
+                    value[1][n]++;
+                }
+            }
+        }
+        for(int i=0;i<26;i++){
+            if(value[0][i]>0){
+                System.out.println((char)((int) i+'a')+"="+value[0][i]);
+            }
+               }
+        for(int i=0;i<26;i++){
+            if(value[1][i]>0){
+                System.out.println((char)((int)i+'A')+"="+value[1][i]);
+            }
+        }
+    }
+}
