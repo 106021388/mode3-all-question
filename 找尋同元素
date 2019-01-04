@@ -1,0 +1,61 @@
+import java.util.Scanner;
+
+public class new1 {
+    public static void  main(String args[]){
+        Scanner scn=new Scanner(System.in);
+        int n1=scn.nextInt();
+        int n2=scn.nextInt();
+        int input1[]=new int[n1];
+        int input1b[]=new int[n1];
+        int input2[]=new int[n2];
+        int input2b[]=new int[n2];
+        int len_1=0;
+        for(int i=0;i<n1;i++){
+            input1[i]=scn.nextInt();
+            if(i==0){
+                input1b[len_1]=input1[i];
+                len_1++;
+            }else{
+                boolean check=true;
+                for(int k=0;k<len_1;k++){
+                    if(input1[i]==input1b[k]){
+                        check=false;
+                    }
+                }
+                if(check){
+                    input1b[len_1]=input1[i];
+                    len_1++;
+                }
+            }
+        }
+        int len_2=0;
+        for(int i=0;i<n2;i++){
+            input2[i]=scn.nextInt();
+            if(i==0){
+                input2b[len_2]=input2[i];
+                len_2++;
+            }else{
+                boolean check=true;
+                for(int k=0;k<len_2;k++){
+                    if(input2[i]==input2b[k]){
+                        check=false;
+                    }
+                }
+                if(check){
+                    input2b[len_2]=input2[i];
+                    len_2++;
+                }
+            }
+        }
+
+    int sum=0;
+        for(int i=0;i<len_1;i++){
+            for(int j=0;j<len_2;j++){
+                if(input1b[i]==input2b[j]){
+                    sum++;
+                }
+            }
+        }
+        System.out.println(sum);
+    }
+}
