@@ -1,0 +1,45 @@
+import java.util.Scanner;
+public class new4 { public static void  main(String args[]){
+    Scanner scn=new Scanner(System.in);
+    int n=scn.nextInt();
+    scn.nextLine();
+    for(int i=0;i<=n;i++){
+        String input=scn.nextLine();
+        String flower[]=input.split(" ");
+        int value[]=new int[flower.length];
+        for(int j=0;j<flower.length;j++){
+            char  ch = flower[j].charAt(0);
+            switch (ch){
+                case 'S':
+                    value[j]=39;
+                    break;
+                case 'H':
+                    value[j]=26;
+                    break;
+                case 'D':
+                    value[j]=13;
+                    break;
+                case 'C':
+                    break;
+            }
+
+               }
+        for(int ii=0;ii<value.length;ii++){
+            for(int jj=ii+1;jj<value.length;jj++){
+                if(value[jj]>value[ii]){
+                    int kk=value[ii];
+                    value[ii]=value[jj];
+                    value[jj]=kk;
+                    String mm=flower[ii];
+                    flower[ii]=flower[jj];
+                    flower[jj]=mm;
+                }
+            }
+        }
+        for(int ii=0;ii<flower.length;ii++){
+            System.out.print(flower[ii]+" ");
+        }
+        System.out.println();
+      }
+    }
+}
