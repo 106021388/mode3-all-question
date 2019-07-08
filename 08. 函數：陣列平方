@@ -1,0 +1,17 @@
+import java.util.Scanner;
+public class p5 {
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int a[]=new int[4];
+        for(int i=0;i<a.length;i++){
+            a[i]=scn.nextInt();
+        }
+        Q(a);
+    }
+    public  static void Q(int s[]){
+        for(int i=0;i<s.length;i++){
+            System.out.print(s[i]*s[i]+"\t");
+        }
+        System.out.println();
+    }
+}
