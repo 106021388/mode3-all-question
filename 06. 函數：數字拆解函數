@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class p3 {
+    public static void main(String[] args) {
+        Scanner scn=new Scanner(System.in);
+        int a=scn.nextInt();
+        Q(a);
+    }
+    public static  void  Q(int a){
+        String b=Integer.toString(a);
+        for(int i=0;i<b.length();i++){
+            System.out.print(b.charAt(i)+" ");
+        }
+        System.out.println();
+    }
+}
